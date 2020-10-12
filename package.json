@@ -1,6 +1,7 @@
 {
   "name": "grupo3",
   "version": "0.0.0",
+  "main": "webApi/app.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -40,7 +41,9 @@
     "rxjs": "~6.5.4",
     "sweetalert2": "^9.15.1",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "jsonwebtoken": "^8.5.1",
+    "tedious": "^8.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.7",
@@ -66,7 +69,6 @@
     "typescript": "~3.7.5"
   },
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.",
-  "main": "karma.conf.js",
   "author": "",
   "license": "ISC"
 }

@@ -14,6 +14,7 @@ export class PorSectorComponent implements OnInit {
   formxSector : FormGroup
   sector : Array<Sector> = new Array<Sector>();
   sectorQuery : Array<Sector> = new Array<Sector>();
+  sectores: number;
 
   constructor(private fb:FormBuilder, private service : DataBaseService) { }
 
@@ -28,8 +29,8 @@ export class PorSectorComponent implements OnInit {
     })
   }
 
-  agregar(formValue : any){
-    let idSector = formValue.id_Sec;
+  agregar(){
+    let idSector = this.sectores;
 
     this.service.leerSectorxId(idSector).subscribe((item)=>{
       this.sectorQuery = item;
@@ -39,8 +40,8 @@ export class PorSectorComponent implements OnInit {
       console.log("exploto"+error);
     })
   }
-  agregar1(formValue : any){
-    let idSector = formValue.id_Sec;
+  agregar1(){
+    let idSector = this.sectores
 
     this.service.leerSectorxId(idSector).subscribe((item)=>{
       this.sectorQuery = item;
@@ -49,6 +50,11 @@ export class PorSectorComponent implements OnInit {
     },error=>{
       console.log("exploto"+error);
     })
+  }
+
+  sectoresID(event){
+    this.sectores = event
+    console.log(this.sectores)
   }
 
   generacionPdf(){
